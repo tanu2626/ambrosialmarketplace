@@ -3,8 +3,13 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
+
+  respond_to :html
+
+
   def index
-    @products = Product.all
+    @products = Product.where(availability: true)
+    respond_with(@products)
   end
 
   # GET /products/1
