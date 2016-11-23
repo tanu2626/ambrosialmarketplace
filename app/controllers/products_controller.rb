@@ -1,33 +1,25 @@
 class ProductsController < ApplicationController
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-
   # GET /products
   # GET /products.json
-
-  respond_to :html
-
-
   def index
     @products = Product.where(availability: true)
-    respond_with(@products)
   end
 
-  # GET /products/1
+  # GET /bs/1
   # GET /products/1.json
   def show
-    respond_with(@product)
   end
 
   # GET /products/new
   def new
     @product = Product.new
-    respond_with(@product)
   end
 
   # GET /products/1/edit
   def edit
-    authorize! :manage, @product
+      authorize! :manage, @product
   end
 
   # POST /products
@@ -49,7 +41,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    authorize! :manage, @product
+         authorize! :manage, @product
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -75,11 +67,11 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @book = Product.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-       params.require(:product).permit(:name, :description, :price, :availability, :image, :resource)
+      params.require(:product).permit(:name, :description, :price, :availability)
     end
 end
