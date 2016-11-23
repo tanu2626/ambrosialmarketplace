@@ -3,7 +3,7 @@
 
 	<div class="col-md-4">
 		<h3 class="text-center">
-		    Books <%= link_to "New Product", new_product_path, class: "btn btn-primary btn-sm" %>
+		    Products <%= link_to "New Product", new_product_path, class: "btn btn-primary btn-sm" %>
 		 </h3>
      <table class="table table-condensed">
 			<thead>
@@ -20,7 +20,7 @@
         <td><%= product.id %></td>
         <td><%= link_to product.name, product_path(product) %></td>
         <td><%= product.name %></td>
-        	<td><%= link_to "edit", edit_product_path(product) %></td> 
+        	<td><%= link_to "edit", edit_product_path(product) %></td>
         <td><%= product.availability %></td>
         <td></td>
       </tr>
