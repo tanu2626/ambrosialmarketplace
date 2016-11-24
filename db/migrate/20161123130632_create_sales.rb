@@ -6,7 +6,7 @@ class CreateSales < ActiveRecord::Migration[5.0]
       t.string :guid
       t.integer :product_id
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

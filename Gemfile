@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -52,4 +53,7 @@ gem 'devise'
 gem 'cancan'
 gem 'paperclip'
 gem 'dotenv-rails', groups: [:development]
-gem 'friendly_id'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'stripe'
+gem "figaro"

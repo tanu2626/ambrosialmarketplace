@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     if current_user
         redirect_to products_path
     end
+    @products = Product.last(12)
   end
 
 
