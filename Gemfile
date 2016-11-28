@@ -57,3 +57,4 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'stripe'
 gem "figaro"
+gem 'friendly_id'

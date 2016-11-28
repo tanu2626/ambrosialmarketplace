@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+
+
   belongs_to :user
   belongs_to :sales
   mount_uploader :avatar, AvatarUploader
@@ -8,7 +10,7 @@ class Product < ApplicationRecord
 
   # validates_numericality_of :price,
   # greather_then: 49, message: "Must be at least 50 cents"
-  #
+
 
   #
   # validates_numericality_of :price,

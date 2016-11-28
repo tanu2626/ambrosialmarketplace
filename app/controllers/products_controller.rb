@@ -33,9 +33,9 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-     @product = Product.new(product_params)
+    @product = Product.new(product_params)
     # current_user.products.new(product_params)
-     @product.user_id = current_user
+    @product.user_id = current_user
     #debugger
 
     respond_to do |format|
@@ -52,6 +52,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+
 
     respond_to do |format|
       if @product.update(product_params)
