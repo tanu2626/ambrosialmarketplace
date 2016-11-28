@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.where(availability: true)
-    
+
   end
 
   # GET /products/1

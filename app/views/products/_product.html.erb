@@ -1,7 +1,7 @@
 <div class="col-md-3">
     <div class="thumbnail">
     	<%= link_to product_path(product) do %>
-	        <%= image_tag product.avatar.url(:thumb), class: "img-responsive" %>
+	        <%= image_tag product.avatar.url, class: "img-responsive" %>
         <% end %>
 
 	    <div class="caption">
@@ -17,7 +17,7 @@
               </div>
             <% end %>
             <label class="amount">
-              
+
             </label>
           </article>
 
