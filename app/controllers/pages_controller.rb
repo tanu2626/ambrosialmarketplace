@@ -12,5 +12,6 @@ class PagesController < ApplicationController
 
   def dashboard
      @products = current_user.products
+     
   end
 end

@@ -2,7 +2,7 @@ class Product < ApplicationRecord
 
 
   belongs_to :user
-  # belongs_to :sales
+  # has_many :sales
   mount_uploader :avatar, AvatarUploader
   # has_attached_file :image
 
