@@ -4,9 +4,9 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :description
       t.integer :price
-      t.boolean :availability
+      t.boolean :availability, default: true
 
-      t.timestamps
+      t.timestamps null :false
     end
   end
 end
